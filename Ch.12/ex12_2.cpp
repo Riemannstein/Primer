@@ -1,4 +1,4 @@
-#Ex_12_02
+// Ex_12_02
 #include <vector>
 #include <string>
 #include <initializer_list>
