@@ -8,6 +8,7 @@ class Sales_data {
     friend std::istream& operator>>(std::istream&, Sales_data&); // input
     friend std::ostream& operator<<(std::ostream&, const Sales_data&); // output
     friend Sales_data operator+(const Sales_data&, const Sales_data&); // addition
+    friend Sales_data operaotr-(const Sales_data&, const Sales_data&); // subtraction
 
 public:
     Sales_data(const std::string &s, unsigned n, double p):bookNo(s), units_sold(n), revenue(n*p){ }
@@ -29,6 +30,8 @@ private:
 std::istream& operator>>(std::istream&, Sales_data&);
 std::ostream& operator<<(std::ostream&, const Sales_data&);
 Sales_data operator+(const Sales_data&, const Sales_data&);
+Sales_data operator-(const Sales_data&, const Sales_data&);
+
 
 inline double Sales_data::avg_price() const
 {
